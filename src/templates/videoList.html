@@ -7,7 +7,10 @@
 </ul> -->
 
 <ul class="video-list">
-   <video-list-entry ng-repeat="video in $ctrl.videos" video= "video" fetchVideo="$ctrl.fetchVideo"></video-list-entry>
+   <video-list-entry
+     index="$index"
+     video="video"
+     ng-repeat="video in $ctrl.videos track by $index" video="video" on-click="$ctrl.onClick"></video-list-entry>
  <!--  <video-list-entry><h5><em>videoListEntry</em> component goes here</h5></video-list-entry>
   <video-list-entry><h5><em>videoListEntry</em> component goes here</h5></video-list-entry>
   <video-list-entry><h5><em>videoListEntry</em> component goes here</h5></video-list-entry>

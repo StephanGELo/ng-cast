@@ -13,15 +13,12 @@
   
 angular.module('video-player')
   .component('videoList', {
-    binding: {
-      videos: '<'
+    bindings: {
+      videos: '<',
+      onClick: '<'
     },
     
-    controller: function() {
-    this.videos = window.exampleVideoData;
-      
-      console.log("in videoList", this);
-    },
+  
   
     templateUrl: `src/templates/videoList.html`
     

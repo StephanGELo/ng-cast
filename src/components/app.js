@@ -1,16 +1,21 @@
 angular.module('video-player')
 
   .component('app', {
-    binding: {
-      videos: '<'
-    },
+    
     controller: function() { 
-      this.videos = window.exampleVideoData;
-      this.video = window.exampleVideoData[0];
-      console.log('In app', this);
-      this.fetchVideo = function() {
-        return this.videos.snippet.thumbnails.default.url;
+
+      this.videos = exampleVideoData;
+      this.currentVideo = exampleVideoData[0];
+
+      this.onClick = (index) => {
+        console.log('inside onClick, app ', this.videos);
+        this.currentVideo = this.videos[index];
+        console.log('clicked');  
       };
+      console.log('In app', this);
+      // this.selectVideo = function() {
+      //   return this.videos.snippet.thumbnails.default.url;
+      // };
     },
     
     
