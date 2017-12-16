@@ -11,15 +11,18 @@
 //     templateUrl: `src/templates/videoList.html`
 //   });
   
-  angular.module('video-player')
+angular.module('video-player')
   .component('videoList', {
-    // bindings: {
-    //   exampleVideos: '<'
-    // },
+    binding: {
+      videos: '<'
+    },
     
     controller: function() {
-      console.log("in videoList", exampleVideos);
+    this.videos = window.exampleVideoData;
+      
+      console.log("in videoList", this);
     },
   
     templateUrl: `src/templates/videoList.html`
+    
   });

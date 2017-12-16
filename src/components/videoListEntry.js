@@ -4,8 +4,8 @@
 // });
 
 angular.module('video-player')
-.component('videoListEntry', {
+  .component('videoListEntry', {
   
-  templateUrl: `src/templates/videoListEntry.html`,
+    templateUrl: `src/templates/videoListEntry.html`
   // TODO
-});
+  });
